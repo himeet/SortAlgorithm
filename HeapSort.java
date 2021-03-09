@@ -33,7 +33,7 @@ public class HeapSort {
     public static void heapSort(int[] nums, int heapSize) {
         buildHeap(nums, heapSize);
         for (int i = heapSize - 1; i >= 0; i--) {  // 从最后一个节点出发，一直到第0个节点
-            swap(nums, i, 0);
+            swap(nums, i, 0);  // 交换堆顶元素（nums[0]）和当前堆尾元素（nums[i]）
             heapify(nums, i, 0);  // i表示当前树的节点数
         }
     }
