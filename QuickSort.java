@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class QuickSort {
     public static void main(String[] args) {
         // 定义输入
@@ -8,9 +10,7 @@ public class QuickSort {
 
         // 输出结果
         System.out.println("快速排序后的结果为：");
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
+        System.out.println(Arrays.toString(nums));
     }
 
     /**
