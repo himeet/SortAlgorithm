@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * 选择排序（默认按照从小到大排序）
  * 算法思想：从待排序的数据中寻找最小值，将其与序列最左边的数字进行交换
@@ -9,6 +11,18 @@ public class SelectSort {
         int[] nums = new int[] {5, 3, 2, 4, 1};
 
         // 选择排序
+        selectSort(nums);
+
+        // 输出结果
+        System.out.println("选择排序后的结果为：");
+        System.out.println(Arrays.toString(nums));
+    }
+
+    /**
+     * 选择排序
+     * @param nums
+     */
+    public static void selectSort(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             int index = i;  // index表示当前循环中最小值的下标
             // 找出当前循环中的最小值的下标
@@ -21,12 +35,6 @@ public class SelectSort {
             int tmp = nums[index];
             nums[index] = nums[i];
             nums[i] = tmp;
-        }
-
-        // 输出结果
-        System.out.println("选择排序后的结果为：");
-        for (int num : nums) {
-            System.out.print(num + " ");
         }
     }
 }
