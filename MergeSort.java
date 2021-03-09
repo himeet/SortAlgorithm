@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * 归并排序（默认按照从小到大排序）
  * 算法思想：
@@ -14,9 +16,7 @@ public class MergeSort {
 
         // 输出结果
         System.out.println("插入排序后的结果为：");
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
+        System.out.println(Arrays.toString(nums));
     }
 
     /**
