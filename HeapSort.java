@@ -66,6 +66,9 @@ public class HeapSort {
         int leftChild = 2 * root + 1;  // 根据公式推得
         int rightChild = 2 * root + 2;  // 根据公式推得
         int max = root;
+
+        // 注意：这里的leftChild < heapSize一定要放在nums[leftChild] > nums[max]之前！！
+        //      不然会出现数组越界异常，下一个if判断同理
         if (leftChild < heapSize && nums[leftChild] > nums[max]) {
             max = leftChild;
         }
